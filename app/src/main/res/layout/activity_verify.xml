@@ -2,53 +2,61 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:background="@color/white"
+    android:background="@color/white"    android:id="@+id/scrollview"
+
     android:orientation="vertical" android:layout_width="match_parent"
     android:layout_height="match_parent">
 
 
 
-    <include
-        android:id="@+id/include"
-        layout="@layout/layout_toolbar_auth" />
-
-    <TextView
-        android:id="@+id/textView9"
+    <ImageView
+        android:id="@+id/imageView9"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:text="Xác thực đăng ký"
-        android:textColor="#0B2031"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="@+id/textView11"
-        app:layout_constraintStart_toEndOf="@+id/textView11"
-        app:layout_constraintTop_toTopOf="@+id/textView11" />
+        android:layout_marginEnd="8dp"
+        android:transitionName="logo"
+        android:src="@drawable/ic_logo_momgo_copy_3"
+        app:layout_constraintEnd_toStartOf="@+id/imageView23"
+        app:layout_constraintStart_toStartOf="@+id/imageView23"
+        app:layout_constraintTop_toTopOf="@+id/imageView23" />
+
+    <ImageView
+        android:id="@+id/imageView23"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:src="@drawable/ic_path_bg"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/textView11"
+        android:id="@+id/textView6"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginBottom="16dp"
+
+        android:text="Vui lòng nhập mã xác thực gồm 04 chữ số vừa gửi vào số điện thoại của bạn"
+        android:textColor="#0B2031"
+        android:textSize="@dimen/dps14"
+        app:layout_constraintBottom_toTopOf="@+id/username_txt"
+        app:layout_constraintEnd_toEndOf="@+id/imageView9"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView7" />
+
+    <TextView
+        android:id="@+id/textView7"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
+
         android:layout_marginTop="32dp"
-        android:background="@drawable/shape_cicle_gray"
-        android:gravity="center"
-        android:text="2"
-        android:textColor="@color/white"
-        android:textStyle="bold"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/include" />
-
-    <TextView
-        android:id="@+id/textView12"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="16dp"
-        android:text="Vui lòng nhập mã xác thực"
-
+        android:text="Xác thực..."
         android:textColor="#0B2031"
+        android:textSize="30sp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView9" />
+        app:layout_constraintTop_toBottomOf="@+id/imageView9" />
 
 
     <com.alimuzaffar.lib.pin.PinEntryEditText
@@ -56,54 +64,56 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
-        android:layout_marginTop="16dp"
         android:layout_marginEnd="32dp"
         android:cursorVisible="false"
         android:digits="1234567890"
+        android:gravity="center"
         android:inputType="number"
         android:maxLength="4"
         android:textIsSelectable="false"
         android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView12"
+        app:layout_constraintTop_toBottomOf="@+id/imageView24"
         app:pinAnimationType="popIn"
-        app:pinTextBottomPadding="8dp"
         app:pinBackgroundDrawable="@drawable/bg_pin"
-        android:gravity="center"
-        app:pinLineColors="@color/gray"
         app:pinBackgroundIsSquare="true"
+        app:pinLineColors="@color/gray"
         app:pinLineStroke="2dp"
         app:pinLineStrokeSelected="4dp"
-       />
+        android:layout_marginTop="@dimen/dp16"
+        app:pinTextBottomPadding="8dp"
+        tools:layout_editor_absoluteY="273dp" />
 
     <Button
         android:id="@+id/btnVerify"
-        android:layout_width="0dp"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:layout_marginTop="32dp"
         android:layout_marginEnd="16dp"
+        android:paddingLeft="48dp"
+        android:paddingRight="48dp"
         android:background="@drawable/btn_gradient_green"
         android:text="Xác thực"
-        android:textColor="@color/white"
-        android:textSize="16sp"
+        android:textColor="@color/green"
+        android:textAllCaps="false"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txt_pin_entry" />
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout" />
 
     <LinearLayout
+        android:id="@+id/linearLayout"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:layout_margin="@dimen/dp16"
-        android:layout_marginStart="8dp"
-        android:layout_marginEnd="8dp"
+        android:layout_marginTop="8dp"
         android:gravity="center"
         android:orientation="horizontal"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btnVerify">
+        app:layout_constraintEnd_toEndOf="@+id/txt_pin_entry"
+        app:layout_constraintTop_toBottomOf="@+id/txt_pin_entry">
 
         <TextView
             android:id="@+id/tvResend"
@@ -111,8 +121,8 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:letterSpacing="0.04"
-            android:text="Gửi lại sau"
-            android:textColor="#5b5a5a"
+            android:text="Gửi lại OTP"
+            android:textColor="@color/green"
             android:textSize="14sp" />
 
         <TextView
@@ -123,7 +133,19 @@
             android:layout_marginLeft="@dimen/dp5"
             android:letterSpacing="0.04"
             android:text="30s"
-            android:textColor="@color/colorAccent"
+            android:textColor="@color/green"
             android:textSize="14sp" />
     </LinearLayout>
+
+    <ImageView
+        android:id="@+id/imageView24"
+        android:layout_width="120px"
+        android:layout_height="160px"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView6"
+        app:srcCompat="@drawable/otp" />
 </androidx.constraintlayout.widget.ConstraintLayout>

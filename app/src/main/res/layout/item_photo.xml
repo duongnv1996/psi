@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="156dp"
+    android:id="@+id/card"
+    app:cardUseCompatPadding="true"
+    app:cardBackgroundColor="@color/white"
+    android:layout_height="178dp"
+
+    android:layout_marginRight="@dimen/dp4"
+    android:foreground="?selectableItemBackground"
+    android:orientation="vertical"
+    app:cardCornerRadius="4dp">
+    <ImageView
+        android:id="@+id/imgShop"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintBottom_toTopOf="@+id/tvNameShop"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        android:scaleType="centerCrop"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/bg" />
+
+</androidx.cardview.widget.CardView>

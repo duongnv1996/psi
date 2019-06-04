@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    package="com.skynet.mumgo">
+    package="com.skynet.psi">
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
@@ -20,29 +20,29 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:usesCleartextTraffic="true"
         android:supportsRtl="true"
-        android:name=".application.AppController"
+        android:name="com.skynet.psi.application.AppController"
         android:largeHeap="true"
         android:theme="@style/AppTheme.NoActionBar"
         tools:targetApi="m"
         tools:ignore="GoogleAppIndexingWarning">
         <uses-library android:name="org.apache.http.legacy"
             android:required="false"/>
-        <activity android:name=".ui.main.MainActivity"         android:theme="@style/AppTheme.NoActionBar"
+        <activity android:name="com.skynet.psi.ui.main.MainActivity"         android:theme="@style/AppTheme.NoActionBar"
             >
 
         </activity>
-        <activity android:name=".ui.splash.SplashActivity"
+        <activity android:name="com.skynet.psi.ui.splash.SplashActivity"
             android:theme="@style/AppThemeAuth.NoActionBar" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".ui.privacy.TermActivity" />
-        <activity android:name=".ui.privacy.PrivacyActivity" />
+        <activity android:name="com.skynet.psi.ui.privacy.TermActivity" />
+        <activity android:name="com.skynet.psi.ui.privacy.PrivacyActivity" />
         <provider
-            android:name=".ui.views.GenericFileProvider"
-            android:authorities="com.skynet.mumgo.provider"
+            android:name="com.skynet.psi.ui.views.GenericFileProvider"
+            android:authorities="com.skynet.psi.provider"
             android:exported="false"
             android:grantUriPermissions="true">
             <meta-data
@@ -59,30 +59,48 @@
         <activity
             android:name="me.iwf.photopicker.PhotoPagerActivity"
             android:theme="@style/Theme.AppCompat.NoActionBar" />
-        <activity android:name=".ui.DetailNotificationActivity.DetailNotificationActivity" />
-        <activity android:name=".ui.base.ActivityNetwork" />
+        <activity android:name="com.skynet.psi.ui.DetailNews.DetailNotificationActivity" />
+        <activity android:name="com.skynet.psi.ui.base.ActivityNetwork" />
 
-        <activity android:name=".ui.profile.ProfileActivity"  android:theme="@style/AppThemeAuth.NoActionBar"/>
-        <activity android:name=".ui.auth.AuthActivity" android:theme="@style/AppThemeAuth2.NoActionBar"/>
-        <activity android:name=".ui.auth.login.LoginActivity"   android:theme="@style/AppThemeAuth.NoActionBar"/>
-        <activity android:name=".ui.auth.signup.ActivitySignUp"  android:theme="@style/AppThemeAuth.NoActionBar"/>
-        <activity android:name=".ui.auth.verifyaccount.VerifyAccountActivity"  android:theme="@style/AppThemeAuth.NoActionBar"/>
-        <activity android:name=".ui.auth.updateProfile.ActivityProfileUpdate"  android:theme="@style/AppThemeAuth.NoActionBar"/>
-        <activity android:name=".ui.auth.updateProfile.SearchMapAdressActivity"  android:theme="@style/AppThemeAuth.NoActionBar"/>
-        <activity android:name=".ui.auth.forgotPassword.ForgotPwActivity"  android:theme="@style/AppThemeAuth.NoActionBar"/>
-        <activity android:name=".ui.detailshop.DetailShopActivity" android:theme="@style/AppThemeAuth.NoActionBar"/>
-        <activity android:name=".ui.detailProduct.ActivityDetailProduct"  android:theme="@style/AppThemeAuth.NoActionBar"/>
-        <activity android:name=".ui.cart.CartActivity" />
-        <activity android:name=".ui.checkout.CheckoutActivity" android:theme="@style/AppTheme.NoActionBar.Chat"/>
-        <activity android:name=".ui.choosepayment.ChoosepaymetnActivity" />
-        <activity android:name=".ui.enterpin.EnterpinActivity" android:theme="@style/AppThemeAuth.NoActionBar" />
-        <activity android:name=".ui.listProduct.ListProductActivity" />
+        <activity android:name="com.skynet.psi.ui.profile.ProfileActivity"  />
+        <activity android:name="com.skynet.psi.ui.auth.AuthActivity" android:theme="@style/AppThemeAuth2.NoActionBar"/>
+        <activity android:name="com.skynet.psi.ui.auth.login.LoginActivity"   android:theme="@style/AppThemeAuth.NoActionBar"/>
+        <activity android:name="com.skynet.psi.ui.auth.signup.ActivitySignUp"  android:theme="@style/AppThemeAuth.NoActionBar"/>
+        <activity android:name="com.skynet.psi.ui.auth.verifyaccount.VerifyAccountActivity"  android:theme="@style/AppThemeAuth.NoActionBar"/>
+        <activity android:name="com.skynet.psi.ui.auth.updateProfile.ActivityProfileUpdate"  android:theme="@style/AppThemeAuth.NoActionBar"/>
+        <activity android:name="com.skynet.psi.ui.auth.updateProfile.SearchMapAdressActivity"  android:theme="@style/AppThemeAuth.NoActionBar"/>
+        <activity android:name="com.skynet.psi.ui.auth.forgotPassword.ForgotPwActivity"  android:theme="@style/AppThemeAuth.NoActionBar"/>
+        <activity android:name="com.skynet.psi.ui.detailshop.DetailShopActivity" android:theme="@style/AppThemeAuth.NoActionBar"/>
+        <activity android:name="com.skynet.psi.ui.detailProduct.ActivityDetailProduct"  android:theme="@style/AppThemeAuth.NoActionBar"/>
+        <activity android:name="com.skynet.psi.ui.cart.CartActivity" />
+        <activity android:name="com.skynet.psi.ui.checkout.CheckoutActivity" android:theme="@style/AppThemeAuth.NoActionBar.Chat"/>
+        <activity android:name="com.skynet.psi.ui.choosepayment.ChoosepaymetnActivity" />
+        <activity android:name="com.skynet.psi.ui.enterpin.EnterpinActivity" android:theme="@style/AppThemeAuth.NoActionBar" />
+        <activity android:name="com.skynet.psi.ui.listProduct.ListProductActivity" />
+        <activity android:name="com.skynet.psi.ui.schedule.ListHistoryActivity" />
+        <activity android:name="com.skynet.psi.ui.detailhistory.HistoryDetailActivity" />
+        <activity android:name="com.skynet.psi.ui.chatting.ChatActivity" />
+        <activity android:name="com.skynet.psi.ui.listchat.ListChatActivity" />
+        <activity android:name="com.skynet.psi.ui.category.listProduct.ListProductActivity" />
+        <activity android:name="com.skynet.psi.ui.scanqr.ScannerQr" />
+        <activity android:name="com.skynet.psi.ui.contact.ContactUsActivity" />
+        <activity android:name="com.skynet.psi.ui.shop.NearbyActivity" />
+        <activity android:name="com.skynet.psi.ui.home.ActivityDetailNews" />
+        <activity android:name="com.skynet.psi.ui.search.ActivitySearch" />
+        <activity android:name="com.skynet.psi.ui.news.NotificationActivity" />
+        <activity android:name="com.skynet.psi.ui.location.LocationActivity" />
+        <activity android:name="com.skynet.psi.ui.Notification.NotificationActivity" />
+        <activity android:name="com.skynet.psi.ui.detailNotification.DetailNotificationActivity" />
+        <activity android:name=".ui.booking.BookingActivity" />
+        <activity android:name=".ui.promotion.PromotionActivity" />
+        <activity android:name=".ui.payment.PaymentActivity" />
+        <activity android:name=".ui.connect.ConnectActivity" />
         <activity android:name=".ui.history.ListHistoryActivity" />
-        <activity android:name=".ui.detailhistory.HistoryDetailActivity" />
-        <activity android:name=".ui.chatting.ChatActivity" />
-        <activity android:name=".ui.listchat.ListChatActivity" />
-        <activity android:name=".ui.category.listProduct.ListProductActivity" />
-        <activity android:name=".ui.ScannerQr" />
+        <activity android:name=".ui.detailBooking.ActivityBookingDetail" />
+        <activity android:name=".ui.feedback.FeedbackActivity" />
+        <activity android:name=".ui.listfeedback.ListFeedbackActivity" />
+        <activity android:name=".ui.ViewPhotoActivity" />
+        <activity android:name=".ui.detailfeedback.DetailFeedbackActivity" />
 
         <meta-data
             android:name="io.fabric.ApiKey"
@@ -90,39 +108,39 @@
 
 
 
-        <service android:name=".network.socket.SocketClient">
+        <service android:name="com.skynet.psi.network.socket.SocketClient">
             <intent-filter>
                 <action android:name="socket" />
             </intent-filter>
         </service>
 
-        <receiver android:name=".network.socket.RestartReceiver">
+        <receiver android:name="com.skynet.psi.network.socket.RestartReceiver">
             <intent-filter>
                 <action android:name="android.intent.action.BOOT_COMPLETED" />
                 <action android:name="chayngamT.restart" />
             </intent-filter>
         </receiver>
-        <receiver android:name=".network.socket.InternetReceiver">
+        <receiver android:name="com.skynet.psi.network.socket.InternetReceiver">
             <intent-filter>
                 <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
                 <action android:name="android.net.wifi.WIFI_STATE_CHANGED" />
             </intent-filter>
         </receiver>
         <receiver
-            android:name=".network.socket.AlarmReceiver"
+            android:name="com.skynet.psi.network.socket.AlarmReceiver"
             android:enabled="true"
             android:process=":remote" />
         <meta-data
             android:name="com.google.android.geo.API_KEY"
-            android:value="AIzaSyC0wCBs99dEesoLn9n_U5HxJ3N9rYDG27I" />
+            android:value="AIzaSyCX7S60R9aFd4WJxL6eZEcLRC0z1DWlqes" />
         <service
-            android:name=".ui.FCMService">
+            android:name="com.skynet.psi.ui.FCMService">
             <intent-filter>
                 <action android:name="com.google.firebase.MESSAGING_EVENT"/>
             </intent-filter>
         </service>
         <service
-            android:name=".ui.FcmInstanceService">
+            android:name="com.skynet.psi.ui.FcmInstanceService">
             <intent-filter>
                 <action android:name="com.google.firebase.INSTANCE_ID_EVENT"/>
             </intent-filter>

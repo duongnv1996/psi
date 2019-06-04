@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Mumgo.vn</string>
+    <string name="app_name">PSI</string>
     <string name="action_settings">Settings</string>
     <string name="no_connection">No connection…</string>
     <string name="b_n_kh_ng_th_t_i_b_i_h_c_m_i_b_i_v_ch_ng_t_i_kh_ng_k_t_n_i_c_v_i_h_th_ng_trung_t_m_vui_l_ng_ki_m_tra_l_i_internet_3g_4g_wifi">Không thể tải dữ liệu mới, bởi vì chúng tôi không kết nối được với hệ thống trung tâm, vui lòng kiểm tra lại internet 3G/4G/wifi..</string>
@@ -19,6 +19,7 @@ http://play.google.com/store/apps/details?id=%s
     </string>
     <string name="confirm_delete_post"><![CDATA[Bạn có chắc chắn sẽ <font color="#d0021b"><b>Xóa</b></font> bài viết này ?]]></string>
     <string name="confirm_delete_photo"><![CDATA[Bạn có chắc chắn sẽ <font color="#d0021b"><b>Xóa</b></font> ảnh này ?]]></string>
+    <string name="choose_service"><![CDATA[Chọn <font color="#39B54A">loại dịch vụ</font>]]></string>
     <string name="madein"><![CDATA[<font color="#000000">Xuất sứ: </font> %s]]></string>
     <string name="buylease"><![CDATA[<font color="#000000">Mua tối thiểu: </font> %s]]></string>
     <string name="pricedisplay"><![CDATA[<font color="#000000">Giá hiển thị: </font> Bằng giá cửa hàng]]></string>
@@ -26,8 +27,19 @@ http://play.google.com/store/apps/details?id=%s
     <string name="what_do_u_think">Bạn đang nghĩ gì vậy?</string>
     <string name="open_drawer">Open</string>
     <string name="close_drawer">Close</string>
+    <string name="format_time_ship">%02d:%02d</string>
+    <string name="format_time_ship_s"><![CDATA[Giao hàng lúc: <font color="#7ED321">%s</font> ]]></string>
+    <string name="format_price_s"><![CDATA[Tổng tiền: <font color="#7ED321">%,.0fvnđ</font> ]]></string>
+    <string name="sucees"><![CDATA[Cảm ơn bạn đã sử dụng dịch vụ, Hệ thống sẽ tự động tìm kiếm kỹ thuật viên gần bạn  và thông báo tiến trình thực hiện trực tiếp.
+Khoản <font color="#00C464">thanh toán</font> của bạn <font color="#00C464">sẽ bị trừ</font> khi kỹ thuật viên <font color="#00C464">hoàn thành</font> công việc.]]></string>
     <array name="gender">
         <item >Nam</item>
         <item >Nữ</item>
+    </array>
+    <array name="schedule">
+        <item >Không lặp lại</item>
+        <item >Lặp lại 1 ngày/lần</item>
+        <item >Lặp lại 2 tuần/lần</item>
+        <item >Lặp lại 3 tháng/lần</item>
     </array>
 </resources>
